@@ -42,5 +42,5 @@ animations = [{
 z_index = 1
 sprite_frames = SubResource("SpriteFrames_4s4bn")
 autoplay = "default"
-frame_progress = 0.347929
+frame_progress = 0.100807
 offset = Vector2(18, 12)
