@@ -1,0 +1,51 @@
+[gd_scene load_steps=4 format=3 uid="uid://c3uu5b81bt4to"]
+
+[ext_resource type="Script" path="res://scenes/main/main.gd" id="1_5wcec"]
+[ext_resource type="Texture2D" uid="uid://b05n8vscnrfiw" path="res://assets/Gray.png" id="1_psf5u"]
+[ext_resource type="LabelSettings" uid="uid://iubd5adyqn7n" path="res://assets/LG_Title_96.tres" id="2_b1wnw"]
+
+[node name="Main" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_5wcec")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_psf5u")
+stretch_mode = 1
+
+[node name="MC" type="MarginContainer" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 24
+theme_override_constants/margin_top = 24
+theme_override_constants/margin_right = 24
+theme_override_constants/margin_bottom = 24
+
+[node name="VB" type="VBoxContainer" parent="MC"]
+layout_mode = 2
+
+[node name="TitleLabel" type="Label" parent="MC/VB"]
+layout_mode = 2
+text = "SOKOBANISH"
+label_settings = ExtResource("2_b1wnw")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="LevelButtonsContainer" type="GridContainer" parent="MC/VB"]
+layout_mode = 2
+size_flags_vertical = 3
+columns = 6

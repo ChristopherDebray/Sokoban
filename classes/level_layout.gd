@@ -11,3 +11,6 @@ func set_player_start(tile_x: int, tile_y: int) -> void:
 
 func get_player_start() -> Vector2i:
 	return _player_start
+
+func get_tiles_for_layer(type: TileLayers.LayerType) -> Array[Vector2i]:
+	return _tile_layers.get_tiles_for_layer_coords(type)

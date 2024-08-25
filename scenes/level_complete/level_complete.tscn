@@ -1,0 +1,64 @@
+[gd_scene load_steps=6 format=3 uid="uid://cydq7ikn15xx"]
+
+[ext_resource type="Script" path="res://scenes/level_complete/level_complete.gd" id="1_lmror"]
+[ext_resource type="Texture2D" uid="uid://d1vwipf0jm56j" path="res://assets/panel_beigeLight.png" id="1_quskc"]
+[ext_resource type="LabelSettings" uid="uid://iubd5adyqn7n" path="res://assets/LG_Title_96.tres" id="2_oerhh"]
+[ext_resource type="LabelSettings" uid="uid://cax5bcpx5u5rv" path="res://assets/LG_Blue_48.tres" id="3_mi4mu"]
+[ext_resource type="LabelSettings" uid="uid://bgrh87meg8gx1" path="res://assets/LG_Red_48.tres" id="4_ky6pu"]
+
+[node name="LevelComplete" type="MarginContainer"]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/margin_left = 30
+theme_override_constants/margin_top = 30
+theme_override_constants/margin_right = 30
+theme_override_constants/margin_bottom = 30
+script = ExtResource("1_lmror")
+
+[node name="NinePatchRect" type="NinePatchRect" parent="."]
+layout_mode = 2
+texture = ExtResource("1_quskc")
+patch_margin_left = 14
+patch_margin_top = 14
+patch_margin_right = 14
+patch_margin_bottom = 14
+
+[node name="VB" type="VBoxContainer" parent="NinePatchRect"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 80
+alignment = 1
+
+[node name="CompleteLabel" type="Label" parent="NinePatchRect/VB"]
+layout_mode = 2
+text = "LEVEL COMPLETE"
+label_settings = ExtResource("2_oerhh")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="HB" type="HBoxContainer" parent="NinePatchRect/VB"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/separation = 30
+
+[node name="MovesLabel" type="Label" parent="NinePatchRect/VB/HB"]
+layout_mode = 2
+text = "xxx"
+label_settings = ExtResource("3_mi4mu")
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="NewRecordLabel" type="Label" parent="NinePatchRect/VB"]
+visible = false
+layout_mode = 2
+text = "A new record !"
+label_settings = ExtResource("4_ky6pu")
+horizontal_alignment = 1
+vertical_alignment = 1
